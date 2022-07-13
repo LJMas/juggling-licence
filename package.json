@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node start",
     "build": "node lib/build/generate-assets",
-    "serve": "node listen-on-port"
+    "serve": "node listen-on-port",
+    "test": "mocha"
   },
   "dependencies": {
     "acorn": "^8.5.0",
@@ -34,6 +35,7 @@
     "inquirer": "^8.2.0",
     "lodash": "^4.17.21",
     "marked": "^4.0.10",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.15",
     "notifications-node-client": "^5.1.0",
     "nunjucks": "^3.2.1",
