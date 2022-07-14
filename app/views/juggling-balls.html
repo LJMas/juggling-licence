@@ -13,37 +13,36 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">How many balls can you juggle?</h1>
+      <!-- <h1 class="govuk-heading-xl">How many balls can you juggle?</h1> -->
 
-      <form class="form" action="/juggling-trick" method="post">
+      <form class="form" action="/juggling-balls-answer" method="post">
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
         {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
+          idPrefix: "how-many-balls",
+          name: "how-many-balls",
           fieldset: {
             legend: {
-              text: "Where do you live?",
+              text: "How many balls can you juggle?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
-              value: "england",
-              text: "England"
+              value: "3 or more",
+              text: "3 or more",
+              checked: checked("how-many-balls", "3 or more")
             },
             {
-              value: "scotland",
-              text: "Scotland"
+              value: "1 or 2",
+              text: "1 or 2",
+              checked: checked("how-many-balls", "1 or 2")
             },
             {
-              value: "wales",
-              text: "Wales"
-            },
-            {
-              value: "northern-ireland",
-              text: "Northern Ireland"
+              value: "None - I cannot juggle",
+              text: "None - I cannot juggle",
+              checked: checked("how-many-balls", "None - I cannot juggle")
             }
           ]
         }) }}
